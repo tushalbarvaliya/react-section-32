@@ -1,12 +1,20 @@
-import './App.css'
+import "./App.css";
+
+import NewTodo from "./components/NewTodo";
+import Todos from "./components/Todos";
+import TodoContextProvider from "./store/todos-context";
 
 function App() {
+  
 
   return (
-    <>
-    <p>i am tushal</p>
-    </>
-  )
+    <TodoContextProvider>
+      <div>
+        <NewTodo  />
+        <Todos  />
+      </div>
+      </TodoContextProvider>
+  );
 }
 
-export default App
+export default App;
